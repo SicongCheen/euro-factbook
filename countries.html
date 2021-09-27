@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Europe Countries Factbook</title>
+    <link rel="stylesheet" type="text/css" href="countries.css">
+</head>
+
+<body>
+    <div id="main">
+        <h1>Europe Countries Factbook</h1>
+        <form action="countries.php" method="GET">
+
+            <h2>What information do you want?</h2>
+
+            <!-- information display -->
+            <input type="checkbox" id="check-population" name="check-population" value="yes">
+            <label for="check-population">Total population</label><br>
+
+            <input type="checkbox" id="check-birth-rate" name="check-birth-rate" value="yes">
+            <label for="check-birth-rate">Birth rate</label><br>
+
+            <input type="checkbox" id="check-death-rate" name="check-death-rate" value="yes">
+            <label for="check-death-rate">Death rate</label><br>
+
+            <h2>Filter your information by:</h2>
+
+            <!-- population filter -->
+            <label for="filter-population" class="title">Total population:</label>
+            <select name="filter-population" id="filter-population">
+                <option value="none">None</option>
+                <option value="less than">Less than</option>
+                <option value="greater than">Greater than</option>
+            </select>
+            <input type="text" id="filter-population-value" name="filter-population-value">
+            <label>thousands of people</label><br>
+
+            <!-- birth/death rate filter -->
+            <label for="filter-birth-death-rate" class="title">Birth/Death rate:</label>
+            <label>birth rate</label>
+            <select name="filter-birth-death-rate" id="filter-birth-death-rate">
+                <option value="not specified">Not specified</option>
+                <option value="less than">Less than</option>
+                <option value="greater than">Greater than</option>
+            </select>
+            <label>death rate</label><br>
+
+            <!-- language filter -->
+            <label for="filter-language" class="title">Language:</label>
+            <input type="text" id="filter-language" name="filter-language"><br>
+
+            <!-- submit button -->
+            <input type="submit" value="Display Result">
+
+        </form>
+    </div>
+</body>
+
+</html>
